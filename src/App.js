@@ -2,6 +2,7 @@
 import './App.css';
 import axios, { Axios } from 'axios';
 import { useState } from 'react';
+import Lol from "../src/loll.PNG"
 
 function App() {
 
@@ -15,10 +16,42 @@ function App() {
   }
   return (
     <div>
+      <div className='container'>
+        <div className='row'>
+          <div className='col-md-12'>
+            <h1 className='text-warning text-center pt-5 heading animated fadeInDown'>ARIYO FUNNY JOKES <br /> GENERATOR</h1>
 
-      <button onClick={getJoke}>Get Quotes</button>
-      {joke}
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-md-3'></div>
+          <div className='col-md-6'>
+            <div className='jokesbkg'>
+              <h2 className='animated fadeInUp'><cite className='animated fadeInUp'>"{joke}"</cite></h2>
+            </div>
+          </div>
+          <div className='col-md-3'></div>
+        </div>
 
+        <div className='row'>
+          <div className='col-md-12'>
+            <button
+              className='btn btn-warning bt'
+              onClick={getJoke}><img 
+              className='animated tada infinite'
+                src={Lol}
+                alt="laughing"
+                width="30" /> Tell me another</button>
+
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-md-12'>
+            <div className='txt text-center animated fadeInUp'><i>designed by <b>Idowu Ariyo</b></i></div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }
